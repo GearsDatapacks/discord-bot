@@ -6,8 +6,7 @@ const client = new Discord.Client({
   intents: [
     'GUILDS',
     'GUILD_MESSAGES',
-    'GUILD_MEMBERS',
-    'GUILD_MESSAGE_REACTIONS'
+    'GUILD_MEMBERS'
   ]
 });
 
@@ -16,6 +15,8 @@ let bot = {
   prefix: ']',
   owners: ['624197866595811328']
 };
+
+const LOAD_SLASH = process.argv[2] == 'load';
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();

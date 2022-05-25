@@ -15,7 +15,7 @@ const handleSlashCommand = (bot, interaction) => {
   const {client} = bot;
 
   if (!interaction.inGuild()) {
-    return interaction.reply('this command can only be used in servers');
+    return interaction.reply('This command can only be used in servers');
   }
 
   const slashcmd = client.slashcommands.get(interaction.commandName);
